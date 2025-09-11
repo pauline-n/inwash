@@ -1,16 +1,16 @@
 /******* Bootstrap Theming ********/
 
-$primary: #FFC600;
-$secondary: #23A036;
+$primary: #283444; //deep navy blue
+$secondary: #FFC600;  //gold accent
 $light: #F5F5F5;
-$dark: #0a1026;
+$dark: #0A1026; //very dark navy
 
 $font-family-sans-serif: 'Poppins', sans-serif;
 
 // $body-color: #777777;
-$body-color: #1e2633;
+$body-color: #FFFFFF; //lighter background
 
-$headings-color: $dark;
+$headings-color: $primary;
 
 $enable-responsive-font-sizes: true;
 
