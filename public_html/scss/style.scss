@@ -440,3 +440,228 @@ h6,
     padding: 0;
     list-style-type: none;
 }
+
+/********** Custom Utilities **********/
+
+// --------------------
+// Color Palette
+// --------------------
+$primary-color: #283444;   // dark navy
+$secondary-color: #FFC600; // yellow
+$success-color: #28a745;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$light-color: #F5F5F5;
+$dark-color: #0a1026;
+
+// --------------------
+// Validation Tooltips
+// --------------------
+.valid-tooltip {
+  background-color: rgba($success-color, 0.9);
+}
+
+.invalid-tooltip {
+  background-color: rgba($danger-color, 0.9);
+}
+
+// --------------------
+// Buttons
+// --------------------
+.btn {
+  font-weight: 500;
+  border-radius: 100px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+}
+
+@mixin btn-variant($bg, $hover) {
+  background-color: $bg;
+  border-color: $bg;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: $hover;
+    border-color: $hover;
+    color: #fff;
+  }
+}
+
+@mixin btn-outline-variant($color) {
+  background-color: transparent;
+  border: 2px solid $color;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background-color: $color;
+    color: #fff;
+  }
+}
+
+// Solid buttons
+.btn-primary   { @include btn-variant($primary-color, $secondary-color); }
+.btn-secondary { @include btn-variant($secondary-color, darken($secondary-color, 10%)); }
+.btn-success   { @include btn-variant($success-color, darken($success-color, 10%)); }
+.btn-info      { @include btn-variant($info-color, darken($info-color, 10%)); }
+.btn-warning   { @include btn-variant($warning-color, darken($warning-color, 10%)); }
+.btn-danger    { @include btn-variant($danger-color, darken($danger-color, 10%)); }
+.btn-light     { @include btn-variant($light-color, darken($light-color, 10%)); color: $dark-color; }
+.btn-dark      { @include btn-variant($dark-color, lighten($dark-color, 10%)); }
+
+// Outline buttons
+.btn-outline-primary   { @include btn-outline-variant($primary-color); }
+.btn-outline-secondary { @include btn-outline-variant($secondary-color); }
+.btn-outline-success   { @include btn-outline-variant($success-color); }
+.btn-outline-info      { @include btn-outline-variant($info-color); }
+.btn-outline-warning   { @include btn-outline-variant($warning-color); }
+.btn-outline-danger    { @include btn-outline-variant($danger-color); }
+.btn-outline-light     { @include btn-outline-variant($light-color); color: $dark-color; }
+.btn-outline-dark      { @include btn-outline-variant($dark-color); }
+
+// --------------------
+// Typography Utilities
+// --------------------
+.text-white { color: #fff !important; }
+.text-primary { color: $primary-color !important; }
+.text-secondary { color: $secondary-color !important; }
+.text-success { color: $success-color !important; }
+.text-info { color: $info-color !important; }
+.text-warning { color: $warning-color !important; }
+.text-danger { color: $danger-color !important; }
+.text-light { color: $light-color !important; }
+.text-dark { color: $dark-color !important; }
+.text-muted { color: #6c757d !important; }
+
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+.font-weight-light { font-weight: 300 !important; }
+.font-weight-normal { font-weight: 400 !important; }
+.font-weight-medium { font-weight: 500 !important; }
+.font-weight-semi-bold { font-weight: 600 !important; }
+.font-weight-bold { font-weight: 700 !important; }
+.font-weight-bolder { font-weight: 800 !important; }
+.font-italic { font-style: italic !important; }
+
+// --------------------
+// Navbar Links
+// --------------------
+.navbar-light .navbar-nav .nav-link {
+  padding: 30px 15px;
+  color: $dark-color;
+  font-size: 17px;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: $primary-color;
+}
+@media (max-width: 991.98px) {
+  .navbar-light .navbar-nav .nav-link { padding: 5px 0; }
+}
+
+// --------------------
+// Carousel
+// --------------------
+.carousel-item { max-height: 600px; }
+.carousel-caption {
+  top: 0; left: 0; right: 0; bottom: 0;
+  text-align: left;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+.carousel-indicators {
+  width: 60px;
+  top: 0; right: calc(100% - 60px);
+  margin: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.carousel-indicators li {
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  background-color: $secondary-color;
+  opacity: 1;
+}
+.carousel-indicators .active { background-color: $primary-color; }
+@media (max-width: 991.98px) {
+  .carousel-indicators { width: 45px; right: calc(100% - 45px); }
+  .carousel-indicators li { width: 15px; height: 15px; }
+}
+
+// --------------------
+// Background Sections
+// --------------------
+.bg-about {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/about1.jpeg) no-repeat center center;
+  background-size: cover;
+}
+.bg-service {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../img/carousel-1.jpg") no-repeat center center;
+  background-size: cover;
+}
+.bg-portfolio {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/carousel-2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.bg-testimonial {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/carousel-3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+// --------------------
+// Portfolio & Team
+// --------------------
+.portfolio-item { position: relative; overflow: hidden; }
+.portfolio-item .portfolio-img {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  transition: 0.5s;
+}
+.portfolio-item:hover .portfolio-img { top: 100%; }
+.portfolio-item .portfolio-text {
+  position: absolute; width: 100%; height: 100%; top: -100%; left: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: 0.5s;
+}
+.portfolio-item:hover .portfolio-text { top: 0; }
+
+.team .team-img { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; transition: 0.5s; }
+.team:hover .team-img { left: 75px; }
+.team .team-social {
+  position: absolute; width: 75px; top: 0; bottom: 0; left: -75px; transition: 0.5s;
+}
+.team:hover .team-social { left: 0; }
+
+// --------------------
+// Testimonials
+// --------------------
+.testimonial-carousel .owl-item img { width: 75px; height: 75px; border-radius: 75px; }
+.testimonial-carousel .owl-dot { display: inline-block; margin: 0 5px; width: 12px; height: 12px; border-radius: 10px; background: #dddddd; }
+.testimonial-carousel .owl-dot.active { background: $secondary-color; }
+
+// --------------------
+// Miscellaneous
+// --------------------
+.back-to-top { position: fixed; display: none; right: 30px; bottom: 30px; z-index: 11; }
+.blog-date {
+  position: absolute; width: 60px; height: 60px; top: 0; right: 0;
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  border-radius: 0 5px 0 0; background: $secondary-color;
+}
+.contact-form .help-block ul { margin: 0; padding: 0; list-style: none; }
+.team-item { box-shadow: 0 0 45px rgba(0,0,0,0.08); align-items: center; }
+
+// --------------------
+// Section Titles
+// --------------------
+.section-title { position: relative; padding-left: 60px; }
+.section-title::before { content: ""; position: absolute; top: 10px; left: 0; width: 45px; height: 2px; background: $secondary-color; }
+.section-title::after  { content: ""; position: absolute; top: 14px; left: 0; width: 45px; height: 2px; background: $primary-color; }
