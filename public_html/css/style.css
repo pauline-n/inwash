@@ -66,7 +66,7 @@ body {
   background-color: #fff;
 }
 .bg{
-  background-color: #67a38f;
+  background-color: #182841;
 }
 
 .tm{align-items: center;}
@@ -385,6 +385,18 @@ h1, h2, h3, h4, h5, h6,
   color: #283444;
 }
 
+.cc-1 {
+  color: #E1C578 !important;
+}
+
+.cc-2 {
+  color: #283444 !important;
+}
+
+.cc-3 {
+  color: #ffffff !important;
+}
+
 h1, .h1 {
   font-size: 2.5rem;
 }
@@ -611,6 +623,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -5714,6 +5727,7 @@ a.close.disabled {
   opacity: 0;
   transition-property: opacity;
   transform: none;
+  background: rgba(24, 40, 65, 0.83) !important;
 }
 .carousel-fade .carousel-item.active,
 .carousel-fade .carousel-item-next.carousel-item-left,
@@ -9686,13 +9700,13 @@ h6,
 .btn-primary:hover, .btn-primary:focus {
   background-color: #FFC600;
   border-color: #FFC600;
-  color: #fff;
+  color: #283444;
 }
 
 .btn-secondary {
-  background-color: #FFC600;
-  border-color: #FFC600;
-  color: #fff;
+  background-color: #E1C578;
+  border-color: #E1C578;
+  color: #283444;
 }
 .btn-secondary:hover, .btn-secondary:focus {
   background-color: rgb(204, 158.4, 0);
@@ -9988,7 +10002,7 @@ h6,
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background-color: #FFC600;
+  background-color: #e1c578;
   opacity: 1;
 }
 
@@ -10007,24 +10021,38 @@ h6,
   }
 }
 .bg-about {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/about1.jpeg) no-repeat center center;
+  background: linear-gradient(
+    rgba(24, 40, 65, 0.7),  /* top color = #182841 @ 70% */
+    rgba(24, 40, 65, 0.7)   /* bottom color = #182841 @ 70% */
+  ), url(../img/about1.jpeg) no-repeat center center;
   background-size: cover;
 }
 
 .bg-service {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/carousel-1.jpg") no-repeat center center;
+  background: linear-gradient(
+    rgba(24, 40, 65, 0.7),  /* top color = #182841 @ 70% */
+    rgba(24, 40, 65, 0.7)   /* bottom color = #182841 @ 70% */
+  ), url("../img/carousel-1.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .bg-portfolio {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/carousel-2.jpg) no-repeat center center;
+  background: linear-gradient(
+    rgba(24, 40, 65, 0.7),  /* top color = #182841 @ 70% */
+    rgba(24, 40, 65, 0.7)   /* bottom color = #182841 @ 70% */
+  ), url(../img/carousel-2.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .bg-testimonial {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/carousel-3.jpg) no-repeat center center;
+  background: linear-gradient(
+      rgba(24, 40, 65, 0.7),  /* top color = #182841 @ 70% */
+      rgba(24, 40, 65, 0.7)   /* bottom color = #182841 @ 70% */
+    ),
+    url(../img/carousel-3.jpg) no-repeat center center;
   background-size: cover;
 }
+
 
 .portfolio-item {
   position: relative;
