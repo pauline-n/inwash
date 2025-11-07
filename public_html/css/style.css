@@ -10192,3 +10192,20 @@ h6,
   height: 2px;
   background: #283444;
 }
+
+#color-home{
+  color:#ffc107;
+}
+
+
+.tm .row {
+  justify-content: center; /* centers all columns */
+  gap: 1rem;               /* smaller space between cards */
+}
+
+.fixed-box-in {
+  height: 230px;
+}
+
+
+
