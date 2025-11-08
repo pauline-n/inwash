@@ -5709,7 +5709,6 @@ a.close.disabled {
   object-fit: cover; /* ensures the image fills the space without distortion */
   object-position: center;
 }
-
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
     transition: none;
