@@ -10101,16 +10101,15 @@ h6,
   overflow: hidden;
   border-radius: 10px; /* optional, for clean edges */
   position: relative;
-  margin: 0 auto 1rem
 }
 
-.team-img2 {
+/* .team-img {
   width: 100%;
   height: 350px; /* or 300px, 400px depending on your layout */
-  overflow: hidden; 
-  border-radius: 10px;
-  position: relative;
-}
+  /* overflow: hidden; */
+  /* border-radius: 10px; optional, for clean edges */
+  /* position: relative; */
+/* } */ */
 
 .team-img img {
   width: 100%;
