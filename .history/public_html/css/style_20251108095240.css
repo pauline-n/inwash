@@ -10127,7 +10127,6 @@ h6,
   overflow: hidden; 
   border-radius: 10px;
   position: relative;
-  object-fit: cover;
 }
 
 .team-img img {

@@ -10123,11 +10123,10 @@ h6,
 
 .team-img3 {
   width: 100%;
-  height: 200px; /* or 300px, 400px depending on your layout */
+  height: 100; /* or 300px, 400px depending on your layout */
   overflow: hidden; 
   border-radius: 10px;
   position: relative;
-  object-fit: cover;
 }
 
 .team-img img {
