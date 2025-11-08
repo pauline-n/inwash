@@ -6342,7 +6342,8 @@ button.bg-dark:focus {
 .embed-responsive iframe,
 .embed-responsive embed,
 .embed-responsive object,
-.embed-responsive video {
+.embed-responsive video 
+.embed-responsive localVideo {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -10098,6 +10099,9 @@ h6,
   top: 0;
 }
 
+.lower-div {
+  margin-top: 50px; /* adjust as needed */
+}
 .team .team-img {
   position: relative;
   width: 100%;

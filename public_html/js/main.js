@@ -57,6 +57,26 @@
         })
     });
 
+    // Get all buttons that trigger the local video modal
+    $(document).ready(function () {
+        var $localVideoSrc;
+        $('.btn-play').click(function () {
+            $localVideoSrc = $(this).data("src");
+        });
+    
+        $('#localVideoModal').on('shown.bs.modal', function (e) {
+            $("#localVideo source").attr('src', $localVideoSrc);
+            $("#localVideo")[0].load();
+            $("#localVideo")[0].play();
+        });
+    
+        $('#localVideoModal').on('hide.bs.modal', function (e) {
+            $("#localVideo")[0].pause();
+            $("#localVideo")[0].currentTime = 0;
+        });
+    });
+    
+
 
     // Service carousel
     $(".service-carousel").owlCarousel({

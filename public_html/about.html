@@ -142,7 +142,7 @@
                     <div class="d-flex align-items-center pt-4">
                         
                         <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            data-src="videos/introvideo.mp4" data-target="#localVideoModal">
                             <span></span>
                         </button>
                         <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
@@ -171,6 +171,22 @@
         </div>
     </div>
     <!-- Video Modal End -->
+
+    <!-- New Video Modal for local MP4 -->
+    <div class="modal fade" id="localVideoModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" id="localVideo" controls>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="container-xxl py-5 align-container">
         <div class="container">
